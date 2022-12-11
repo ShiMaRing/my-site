@@ -1,7 +1,7 @@
 server:
   port: 443
   ssl:
-    key-store: classpath:luischen.cn.pfx
+    key-store: classpath:xgs.com.pfx
     key-store-password: l29df164yf5d4z
     key-store-type: PKCS12
 
@@ -54,7 +54,7 @@ spring:
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: cn.luischen.model
+  type-aliases-package: com.xgs.model
 
 
 #pagehelper

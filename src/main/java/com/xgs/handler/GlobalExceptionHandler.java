@@ -29,12 +29,5 @@ public class GlobalExceptionHandler {
         e.printStackTrace();
         return APIResponse.fail(msg);
     }
-//
-//    @ExceptionHandler(value = Exception.class)
-//    public String exception(Exception e){
-//        logger.error("find exception:e={}",e.getMessage());
-//        e.printStackTrace();
-//        return "error/400";
-//    }
 
 }
