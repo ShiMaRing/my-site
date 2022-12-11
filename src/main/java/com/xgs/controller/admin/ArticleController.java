@@ -69,6 +69,7 @@ public class ArticleController extends BaseController {
         //add all to redis
         List<ContentDomain> list = articles.getList();
         for (ContentDomain contentDomain : list) {
+            LOGGER.info("set key article-" + contentDomain.getCid() + " to redis");
             redisTemplate.opsForValue().set("article-" + contentDomain.getCid(), contentDomain);
         }
         request.setAttribute("articles", articles);
@@ -134,6 +135,7 @@ public class ArticleController extends BaseController {
         contentService.addArticle(contentDomain);
 
         //添加到缓存
+        LOGGER.info("set key article-" + contentDomain.getCid() + " to redis");
         redisTemplate.opsForValue().set("article-" + contentDomain.getCid(), contentDomain);
 
         return APIResponse.success();
@@ -155,7 +157,7 @@ public class ArticleController extends BaseController {
         if (Boolean.FALSE.equals(result)) {
             content = contentService.getArticleById(cid);
         } else {
-            System.out.println("get article from redis");
+            LOGGER.info("get article-" + cid + " from redis");
             content = (ContentDomain) redisTemplate.opsForValue().get("article-" + cid);
         }
 
@@ -218,6 +220,7 @@ public class ArticleController extends BaseController {
 
         contentService.updateArticleById(contentDomain);
         //添加到缓存
+        LOGGER.info("update key article-" + contentDomain.getCid() + " to redis");
         redisTemplate.opsForValue().set("article-" + contentDomain.getCid(), contentDomain);
         return APIResponse.success();
     }
@@ -233,7 +236,9 @@ public class ArticleController extends BaseController {
     ) {
         contentService.deleteArticleById(cid);
         redisTemplate.delete("article-" + cid);
+
         logService.addLog(LogActions.DEL_ARTICLE.getAction(), cid + "", request.getRemoteAddr(), this.getUid(request));
+
         return APIResponse.success();
     }
 }

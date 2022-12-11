@@ -1,10 +1,12 @@
 package com.xgs.dto;
 
+import java.io.Serializable;
+
 /**
  * 后台统计对象
  * Created by xgs on 2022/11/30.
  */
-public class StatisticsDto {
+public class StatisticsDto implements Serializable {
 
     /**
      * 文章数
