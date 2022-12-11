@@ -3,7 +3,7 @@ package com.xgs.model;
 import java.io.Serializable;
 
 /**
- * Created by winterchen on 2018/4/20.
+ * Created by xgs on 2022/11/20.
  */
 public class UserDomain  implements Serializable {
 

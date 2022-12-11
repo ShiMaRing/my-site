@@ -20,7 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 
 /**
- * Created by winterchen on 2018/5/1.
+ * Created by xgs on 2022/12/1.
  */
 @Component
 public class QiniuCloudService {

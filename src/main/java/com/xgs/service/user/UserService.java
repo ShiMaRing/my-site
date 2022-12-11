@@ -4,23 +4,23 @@ import com.xgs.model.UserDomain;
 
 import org.springframework.stereotype.Service;
 /**
- * Created by winterchen on 2018/4/20.
+ * Created by xgs on 2022/11/20.
  */
 @Service
 public interface UserService {
 
     /**
-     * @Author: winterchen
+     * @Author: xgs
      * @Description: 更改用户信息
-     * @Date: 2018/4/20
+     * @Date: 2022/11/20
      * @param user
      */
     int updateUserInfo(UserDomain user);
 
     /**
-     * @Author: winterchen
+     * @Author: xgs
      * @Description: 根据主键编号获取用户信息
-     * @Date: 2018/4/20
+     * @Date: 2022/11/20
      * @param uId 主键
      */
     UserDomain getUserInfoById(Integer uId);

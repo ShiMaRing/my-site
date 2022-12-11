@@ -2,7 +2,7 @@ package com.xgs.dto;
 
 /**
  * 后台统计对象
- * Created by winterchen on 2018/4/30.
+ * Created by xgs on 2022/11/30.
  */
 public class StatisticsDto {
 

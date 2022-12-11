@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 文章关联信息表
- * Created by winterchen on 2018/4/30.
+ * Created by xgs on 2022/11/30.
  */
 public class RelationShipDomain   implements Serializable {
 

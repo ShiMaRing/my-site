@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Created by winterchen on 2018/4/20.
+ * Created by xgs on 2022/11/20.
  */
 @Service
 public class UserServiceImpl implements UserService {

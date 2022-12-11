@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 项目类
- * Created by winterchen on 2018/4/29.
+ * Created by xgs on 2022/11/29.
  */
 public class MetaDomain implements Serializable {
 

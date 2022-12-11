@@ -19,7 +19,7 @@ import java.util.Arrays;
 
 /**
  * 请求的日志处理
- * Created by winterchen on 2018/4/28.
+ * Created by xgs on 2022/11/28.
  */
 @Aspect
 @Component
@@ -48,16 +48,12 @@ public class WebLogAspect {
         // 记录下请求内容
         LOGGER.info("URL : " + request.getRequestURL().toString());
         LOGGER.info("HTTP_METHOD : " + request.getMethod());
-        LOGGER.info("IP : " + request.getRemoteAddr());
-        LOGGER.info("CLASS_METHOD : " + joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
-        LOGGER.info("ARGS : " + Arrays.toString(joinPoint.getArgs()));
     }
 
     @AfterReturning(returning = "ret", pointcut = "webLog()")
     public void doAfterReturning(Object ret) throws Throwable {
         // 处理完请求，返回内容
         LOGGER.info("RESPONSE : " + ret);
-        LOGGER.info("SPEND TIME : " + (System.currentTimeMillis() - startTime.get()));
         startTime.remove();//用完之后记得清除，不然可能导致内存泄露;
     }
 

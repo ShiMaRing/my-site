@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 网站配置项
- * Created by winterchen on 2018/4/28.
+ * Created by xgs on 2022/11/28.
  */
 public class OptionsDomain implements Serializable {
 

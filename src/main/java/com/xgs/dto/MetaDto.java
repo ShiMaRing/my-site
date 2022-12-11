@@ -4,7 +4,7 @@ import com.xgs.model.MetaDomain;
 
 /**
  * 标签、分类列表
- * Created by winterchen on 2018/4/30.
+ * Created by xgs on 2022/11/30.
  */
 public class MetaDto extends MetaDomain {
 

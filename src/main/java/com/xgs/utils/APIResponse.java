@@ -2,7 +2,7 @@ package com.xgs.utils;
 
 /**
  * 返回的参数封装类
- * Created by winterchen on 2018/4/20.
+ * Created by xgs on 2022/11/20.
  */
 public class APIResponse <T> {
 
