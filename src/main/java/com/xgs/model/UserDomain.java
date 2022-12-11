@@ -1,9 +1,11 @@
 package com.xgs.model;
 
+import java.io.Serializable;
+
 /**
  * Created by winterchen on 2018/4/20.
  */
-public class UserDomain {
+public class UserDomain  implements Serializable {
 
     /** 主键编号 */
     private Integer uid;

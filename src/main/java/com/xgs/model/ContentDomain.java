@@ -1,10 +1,12 @@
 package com.xgs.model;
 
+import java.io.Serializable;
+
 /**
  * 文章实体
  * Created by winterchen on 2018/4/29.
  */
-public class ContentDomain {
+public class ContentDomain   implements Serializable {
 
     /**
      * 文章的主键编号

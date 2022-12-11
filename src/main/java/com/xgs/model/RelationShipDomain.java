@@ -1,10 +1,12 @@
 package com.xgs.model;
 
+import java.io.Serializable;
+
 /**
  * 文章关联信息表
  * Created by winterchen on 2018/4/30.
  */
-public class RelationShipDomain {
+public class RelationShipDomain   implements Serializable {
 
     /**
      * 文章主键编号
