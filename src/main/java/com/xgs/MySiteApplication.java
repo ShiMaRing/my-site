@@ -11,7 +11,6 @@ import org.springframework.cache.annotation.EnableCaching;
 @MapperScan("com.xgs.dao")
 @EnableCaching
 public class MySiteApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(MySiteApplication.class, args);
 	}

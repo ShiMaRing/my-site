@@ -21,11 +21,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(baseInterceptor);
     }
 
-//    @Override
-//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//        registry.addResourceHandler("/admin/**")
-//                .addResourceLocations("/public", "classpath:/admin/")
-//                .setCachePeriod(31556926);
-//    }
+
 
 }

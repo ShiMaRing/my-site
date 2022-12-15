@@ -62,13 +62,13 @@ public class BaseInterceptor implements HandlerInterceptor {
                 request.getSession().setAttribute(WebConst.LOGIN_SESSION_KEY, user);
             }
         }
-        if (uri.startsWith("/admin") && !uri.startsWith("/admin/login") && null == user
+/*        if (uri.startsWith("/admin") && !uri.startsWith("/admin/login") && null == user
                 && !uri.startsWith("/admin/css") && !uri.startsWith("/admin/images")
                 && !uri.startsWith("/admin/js") && !uri.startsWith("/admin/plugins")
                 && !uri.startsWith("/admin/editormd")) {
             response.sendRedirect(request.getContextPath() + "/admin/login");
             return false;
-        }
+        }*/
         //设置get请求的token
         if (request.getMethod().equals("GET")) {
             String csrf_token = UUID.UU64();
